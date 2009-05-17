@@ -5,7 +5,7 @@ class Cyclic
   end
   
   def push(*elements)
-    @buffer += elements
+    @buffer.push(*elements)
     @buffer = @buffer[-@size, @size] if(@buffer.size > @size)
   end
 
