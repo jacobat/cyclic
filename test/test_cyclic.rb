@@ -5,7 +5,7 @@ require "cyclic"
 class TestCyclic < Test::Unit::TestCase
   
   def setup
-    @buffer = Cyclic.new(5)
+    @buffer = Cyclic::Buffer.new(5)
   end
   
   def test_should_put_items_into_buffer

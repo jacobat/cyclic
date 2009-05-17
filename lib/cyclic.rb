@@ -1,17 +1,25 @@
-class Cyclic
-  def initialize(size)
-    @size = size
-    @buffer = []
-  end
-  
-  def push(*elements)
-    @buffer.push(*elements)
-    @buffer = @buffer[-@size, @size] if(@buffer.size > @size)
-  end
+$:.unshift(File.dirname(__FILE__)) unless
+  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 
-  alias_method :<<, :push
+module Cyclic
+  VERSION = '0.0.1'
   
-  def read
-    @buffer
+  class Buffer
+    def initialize(size)
+      @size = size
+      @buffer = []
+    end
+
+    def push(*elements)
+      @buffer.push(*elements)
+      @buffer = @buffer[-@size, @size] if(@buffer.size > @size)
+    end
+
+    alias_method :<<, :push
+
+    def read
+      @buffer
+    end
   end
 end
+
