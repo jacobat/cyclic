@@ -52,4 +52,10 @@ class TestCyclic < Test::Unit::TestCase
     end
     assert_equal(words[1,5], @buffer.read)
   end
+  
+  def test_should_be_enumerable
+    @buffer.push(*(1..5).to_a)
+    actual = @buffer.map{|e| e + 1 }
+    assert_equal((2..6).to_a, actual)
+  end
 end
