@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "website/index.txt"]
   s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/cyclic.rb", "script/console", "script/destroy", "script/generate", "test/test_cyclic.rb", "test/test_helper.rb", "website/index.txt"]
   s.has_rdoc = true
-  s.homepage = %q{http://github.com/#{github_username}/#{project_name}}
+  s.homepage = %q{http://github.com/jacobat/cyclic}
   s.post_install_message = %q{PostInstall.txt}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
