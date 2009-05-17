@@ -4,23 +4,28 @@
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Cyclic is a very simple cyclic buffer
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* No performance optimization has been done, everything is simple stored in an array
+* Implements Enumerable, so each, map, and friends are available
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  buffer = Cyclic::Buffer.new(3)
+  buffer.push(1, 2) => [1, 2]
+  buffer.push(3)    => [1, 2, 3]
+  buffer.push(4)    => [2, 3, 4]
+  buffer.push(5, 6) => [4, 5, 6]
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* None
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* sudo gem install jacobat-cyclic --source http://gems.github.com
 
 == LICENSE:
 
