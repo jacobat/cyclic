@@ -1,7 +1,5 @@
 require "test/unit"
 
-require "cyclic"
-
 class TestCyclic < Test::Unit::TestCase
   
   def setup
